@@ -1,26 +1,47 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
-  },
-  "include": [
-    "src"
-  ]
+	"compilerOptions": {
+		"target": "es5",
+		"moduleResolution": "node",
+		"allowJs": true,
+		"noEmit": false,
+		"strict": true,
+		"esModuleInterop": true,
+		"jsx": "react",
+		"baseUrl": "./src/",
+		"outDir": "build",
+		"declaration": false,
+		"lib": [
+			"dom",
+			"dom.iterable",
+			"esnext",
+			"es5"
+		],
+		"module": "esnext",
+		"removeComments": false,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,	
+		"alwaysStrict": true,
+		"allowUnreachableCode": false,
+		"noImplicitAny": false,
+		"downlevelIteration": true,
+		"noImplicitReturns": true,
+		"typeRoots": [
+			"./node_modules/@types",
+			"./src/@types"
+		],
+		"strictNullChecks": true,
+		"noFallthroughCasesInSwitch": true,
+		"forceConsistentCasingInFileNames": true,
+		"resolveJsonModule": true,
+	},
+	"exclude": [
+		"node_modules",
+		"build",
+		"__tests__",
+		"src/**/*.test.ts",
+		"old",
+	],
+	"include": [
+		"src"
+	]
 }
