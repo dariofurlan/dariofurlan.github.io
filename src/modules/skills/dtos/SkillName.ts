@@ -7,6 +7,7 @@ type SkillName =
     "docker-compose" |
     "github" |
     "github-actions" |
+    "fantom" |
     "gitlab" |
     "google-cloud" |
     "html" |
@@ -26,6 +27,9 @@ type SkillName =
     "solidity" |
     "typescript" |
     "webpack" |
+    "grafana" |
+    "firebase" |
+    "google-cloud-run" |
     "wordpress";
 
 export default SkillName;

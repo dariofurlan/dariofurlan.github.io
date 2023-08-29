@@ -28,14 +28,19 @@ const SkillMapDict: { [key in SkillGroup]: SkillName[] } = {
         "redis",
     ],
     "devops": [
-        "docker",
-        "docker-compose",
         "gitlab",
         "github",
+        "github-actions",
+        "google-cloud",
+        "docker",
+        "docker-compose",
         "kubernetes",
+        "prometheus",
+        "grafana",
     ],
     "blockchain": [
         "solidity",
+        "fantom"
     ],
 };
 
