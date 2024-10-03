@@ -7,7 +7,6 @@ import Content from './components/Content'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-
     <div className='flex-1'>
       <Header />
       <Content>
