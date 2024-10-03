@@ -1,19 +1,21 @@
 
 
 export default function Header() {
-    return <header>
-        <nav className="navbar bg-neutral text-neutral-content">
-            <div className="container mx-auto">
-                <div className="flex-1">
-                    <a href="#" className="text-lg font-bold">Dario Furlan</a>
-                </div>
-                <div className="flex-none">
-                    <button className="btn btn-square btn-ghost">Me</button>
-                    <button className="btn btn-square btn-ghost">Projects</button>
-                    <button className="btn btn-square btn-ghost">Services</button>
-                    <button className="btn btn-square btn-ghost">Contact</button>
-                </div>
+    return <header className="p-2">
+        <div className="navbar bg-neutral text-neutral-content rounded-box font-Outfit">
+            <div className="flex-1">
+                <a href="/" className="btn btn-ghost text-3xl">
+                    Dario Furlan
+                </a>
             </div>
-        </nav>
+            <div className="flex-none">
+                <ul className="menu menu-horizontal px-1">
+                    <li><a href="#me">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
 }
