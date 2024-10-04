@@ -15,7 +15,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <FormSuccess />
     <FormError />
-    <div className='flex-1'>
+    <div className='flex-1 bg-base-100'>
       <Header />
       <Content>
         <Me />

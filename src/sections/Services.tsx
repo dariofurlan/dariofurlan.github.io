@@ -1,6 +1,7 @@
-
+const logoSize = "h-8 w-8 inline-block";
 
 export default function Services() {
+
     return <div>
         <h2 className="text-3xl font-Outfit" id="services">Servizi</h2>
         <div className="overflow-x-auto">
@@ -22,7 +23,14 @@ export default function Services() {
                     </tr>
                     <tr>
                         <td className="px-4 py-2 border border-gray-300">Containerization</td>
-                        <td className="px-4 py-2 border border-gray-300">Docker Container, Docker Compose</td>
+                        <td className="px-4 py-2 border border-gray-300">
+                            <div className="tooltip" data-tip="Docker">
+                                <img src="icons/docker.svg" alt="Docker" className={logoSize} />
+                            </div>
+                            <div className="tooltip" data-tip="Docker Compose">
+                                <img src="icons/docker-compose.svg" alt="Docker Compose" className={logoSize} />
+                            </div>
+                        </td>
                     </tr>
                     <tr>
                         <td className="px-4 py-2 border border-gray-300">Crypto</td>
