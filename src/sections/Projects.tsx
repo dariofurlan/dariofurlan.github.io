@@ -7,7 +7,7 @@ interface INewsPiece {
     desc?: string;
 }
 
-function NewsCard({ title, date, link, img, desc }: INewsPiece) {
+function NewsCard({ title, date, link, img }: INewsPiece) {
     return <div className="flex-1 card bg-base-100 w-96 min-w-72 shadow-xl mr-4">
         <figure>
             <img
