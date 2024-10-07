@@ -4,18 +4,18 @@ import './index.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Content from './components/Content'
-import Contact from './sections/Contact'
-import Me from './sections/Me'
-import FormSuccess from './sections/FormSuccess'
-import FormError from './sections/FormError'
-import Projects from './sections/Projects'
-import Services from './sections/Services'
+import Contact from './section/Contact'
+import Me from './section/Me'
+import FormSuccess from './section/FormSuccess'
+import FormError from './section/FormError'
+import Projects from './section/Projects'
+import Services from './section/Services'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <FormSuccess />
     <FormError />
-    <div className='flex-1 bg-base-100'>
+    <div className='flex-1 w-full bg-base-100'>
       <Header />
       <Content>
         <Me />

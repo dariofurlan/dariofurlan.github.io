@@ -28,5 +28,21 @@ export default function Header() {
                 </ul>
             </div>
         </div>
+        {/* <div className="sticky top-0 ">
+            <ul className="menu bg-base-200 sm:menu-horizontal rounded-box">
+                <li>
+                    <a href="#me">About Me</a>
+                </li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+                <li>
+                    <a href="#services">Services</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div> */}
     </header>
 }
