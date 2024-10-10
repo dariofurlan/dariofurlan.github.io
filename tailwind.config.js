@@ -1,4 +1,6 @@
 import daisyui from 'daisyui'
+import typography from '@tailwindcss/typography';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -6,13 +8,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Outfit: ["Outfit", "sans-serif"],
+      }
+    },
   },
   plugins: [
-    daisyui
+    daisyui,
+    typography,
   ],
   daisyui: {
-    themes: ["light"],
+    themes: ["emerald"],
   },
 }
 
