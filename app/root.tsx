@@ -8,13 +8,14 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import GithubIcon from "./icons/GithubIcon";
-import GitlabIcon from "./icons/GitlabIcon";
-import "./style.css";
+import CodeIcon from "./icons/CodeIcon";
 import CompassIcon from "./icons/CompassIcon";
 import EmailIcon from "./icons/EmailIcon";
+import GithubIcon from "./icons/GithubIcon";
+import GitlabIcon from "./icons/GitlabIcon";
+import StackIcon from "./icons/StackIcon";
+import "./style.css";
 import SellIcon from "./icons/SellIcon";
-import CodeIcon from "./icons/CodeIcon";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -82,13 +83,19 @@ export default function App() {
               </NavLink>
             </li>
             <li>
-              <NavLink to="#services">
+              <NavLink to="/techstack/">
+                <StackIcon className="h-5 w-5" />
+                Tech Stack
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/services/">
                 <SellIcon className="h-5 w-5" />
                 Services
               </NavLink>
             </li>
             <li>
-              <NavLink to="#contact">
+              <NavLink to="/#contact">
                 <EmailIcon className="h-5 w-5" />
                 Contact
               </NavLink>
