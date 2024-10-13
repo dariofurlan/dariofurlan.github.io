@@ -1,12 +1,9 @@
-import daisyui from 'daisyui'
+import daisyui from 'daisyui';
 import typography from '@tailwindcss/typography';
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./public/index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
@@ -21,5 +18,4 @@ export default {
   daisyui: {
     themes: ["emerald"],
   },
-}
-
+};
