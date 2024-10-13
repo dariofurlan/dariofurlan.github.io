@@ -1,12 +1,4 @@
 
-const logoSize = "h-8 w-8 sm:h-12 sm:w-12 inline-block";
-
-function TechEl({ name, logo }: { name: string, logo: string }) {
-    return <div className="flex sm:min-w-32 flex-1 flex-col items-center hover:cursor-pointer px-2 py-4 transition duration-500 ease-in-out hover:scale-105 sm:hover:scale-110">
-        <img src={logo} alt={name} className={logoSize} />
-        <span className="font-Outfit text-lg font-500 text-center pt-2">{name}</span>
-    </div>
-}
 
 export default function Services() {
     return <div className="max-w-[680px] mx-auto bg-base-300 rounded-box p-4">

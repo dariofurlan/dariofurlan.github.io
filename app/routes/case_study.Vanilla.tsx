@@ -43,7 +43,7 @@ export default function Vanilla() {
         <ProjectHead
             title="Vanilla Club Jesolo"
             description={<>realizzata in collaborazione con <a target="_blank" rel="noopener noreferrer" className="link-accent" href="https://42night.club/">42Night S.R.L.</a></>}
-            icon={<img className="rounded-lg h-16 w-16 shadow-xl shadow-gray-400" src="/icon/vanilla_1024.png" alt="Vanilla Club Jesolo" />}
+            icon={<img className="rounded-lg h-16 w-16 shadow-xl shadow-gray-400" src="/icon/vanilla.png" alt="Vanilla Club Jesolo" />}
         />
 
         <p className="prose mx-auto">
