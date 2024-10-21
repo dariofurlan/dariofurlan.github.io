@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="173 66 158.2 158.2" width="146.2" height="146.2" xmlns="http://www.w3.org/2000/svg">
-  <g transform="matrix(1, 0, 0, 1, 123.99160766601561, 29.257492065429688)">
-    <rect x="100.6" y="88.1" class="st2" width="1.7" height="54.4" style="stroke: rgb(44, 73, 81); stroke-miterlimit: 10; stroke-width: 11.1404px;"/>
-    <rect x="153.9" y="88.1" class="st2" width="1.7" height="54.4" style="stroke: rgb(44, 73, 81); stroke-miterlimit: 10; stroke-width: 11.1404px;"/>
-    <path class="st3" d="M128.1,42.3c-40.4,0-73.1,32.7-73.1,73.1s32.7,73.1,73.1,73.1s73.1-32.7,73.1-73.1S168.5,42.3,128.1,42.3z&#10;&#9;&#9;&#9; M128.1,184.9V45.7V184.9z" style="fill: none; stroke: rgb(44, 73, 81); stroke-miterlimit: 10; stroke-width: 11.0984px;"/>
-  </g>
-</svg>
