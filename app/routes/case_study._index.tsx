@@ -1,35 +1,35 @@
 import { Link } from "@remix-run/react";
 
 
-const projects: { name: string, icon: string, url: string, desc: string }[] = [
+export const projects: { name: string, icon: string, url: string, desc: string }[] = [
     {
         name: 'Vanilla',
-        icon: "/icon/vanilla_1024.png",
-        url: 'Vanilla',
+        icon: "/icon/vanilla_lg.png",
+        url: '/case_study/Vanilla',
         desc: 'App per discoteche che digitalizza ingresso, ordini e pagamenti con QR Code dinamici, garantendo sicurezza e gestione avanzata del locale.'
     },
     {
         name: 'Prenota Attrazioni Caribe Bay',
-        url: 'CaribeBay',
-        icon: "/icon/caribebay_1024.png",
+        url: '/case_study/CaribeBay',
+        icon: "/icon/caribebay_lg.png",
         desc: "App per il parco acquatico Caribe Bay che introduce la coda virtuale, permettendo agli ospiti di prenotare l'accesso alle attrazioni e godersi il parco senza attese fisiche"
     },
     {
         name: 'PythIA',
-        url: 'PythIA',
-        icon: "/icon/pythia_1024.png",
+        url: '/case_study/PythIA',
+        icon: "/icon/pythia_lg.png",
         desc: "App per call center che utilizza algoritmi di IA per analizzare le conversazioni in tempo reale, suggerire consigli agli operatori e fornire feedback sul sentimento dell'utente."
     },
     {
         name: 'Docfiler',
-        url: 'Docfiler',
-        icon: "/icon/docfiler_1024.png",
+        url: '/case_study/Docfiler',
+        icon: "/icon/docfiler_lg.png",
         desc: 'App per ESNA SOA che semplifica la raccolta documentale per le certificazioni tramite login SPID e archiviazione sicura con blockchain.'
     },
     {
         name: 'Distress',
-        url: 'Distress',
-        icon: "/icon/distress_1024.png",
+        url: '/case_study/Distress',
+        icon: "/icon/distress_lg.png",
         desc: "App in JavaScript che simula una radio nautica per l'addestramento, permettendo di esercitarsi sui segnali di distress senza l'uso di dispositivi fisici."
     }
 ];

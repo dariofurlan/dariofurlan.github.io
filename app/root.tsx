@@ -53,7 +53,7 @@ export default function App() {
     <header className="p-2">
       <div className="navbar bg-neutral text-neutral-content rounded-box font-Outfit">
         <div className="flex-1">
-          <a href="/" className="btn btn-ghost text-3xl flex flex-row">
+          <a href="/" className="btn btn-ghost text-xl flex flex-row">
             Dario Furlan
             <svg className="w-5" viewBox="0 0 18.5 33.434" xmlns="http://www.w3.org/2000/svg">
               <path d="m0.00001,33.434l0,-4.5l18,0l0,4.5l-18,0z" >
@@ -70,30 +70,30 @@ export default function App() {
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
-            <li>
+            {/* <li>
               <NavLink to="/">
                 <CodeIcon className="h-5 w-5" />
                 About Me
               </NavLink>
             </li>
             <li>
-              <NavLink to="/case_study/">
+              <NavLink to="#case_study">
                 <CompassIcon className="h-5 w-5" />
                 Progetti
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink to="/techstack/">
                 <StackIcon className="h-5 w-5" />
                 Tech Stack
               </NavLink>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <NavLink to="/services/">
                 <SellIcon className="h-5 w-5" />
                 Services
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/#contact">
                 <EmailIcon className="h-5 w-5" />

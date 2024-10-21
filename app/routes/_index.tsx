@@ -1,4 +1,6 @@
 import type { MetaFunction } from "@remix-run/cloudflare";
+import CaseStudies from "./case_study._index";
+import Techstack from "./techstack";
 
 export const meta: MetaFunction = () => {
   return [
@@ -13,8 +15,8 @@ export default function Index() {
       <h2 className="text-3xl font-Outfit py-4" id="me">Chi sono</h2>
       <div className="flex flex-row flex-wrap items-center justify-center">
         <div className="avatar mr-2">
-          <div className="h-full rounded-full w-64">
-            <img src="/profile_3.jpg" alt="Dario Furlan" />
+          <div className="h-full rounded-full sm:w-64 w-32">
+            <img src="/profile.jpg" alt="Dario Furlan" />
           </div>
         </div>
         <div className="flex-1 min-w-80 px-2">
@@ -26,6 +28,16 @@ export default function Index() {
           </p>
         </div>
       </div>
+
+      <div className="divider"><h2 className="text-3xl font-Outfit py-4" id="me">Case Study</h2></div>
+
+      <CaseStudies />
+
+      <div className="divider"><h2 className="text-3xl font-Outfit py-4" id="me">My Tech Stack</h2></div>
+
+      <Techstack />
+
+
       <div className="mx-auto card bg-base-200 w-full max-w-sm shrink-0 shadow-gray-400 shadow-xl my-8">
         <form className="card-body"
           action="https://formie.io/form/2845024d-fc14-409d-aaa9-22dcb1e8d0c3"

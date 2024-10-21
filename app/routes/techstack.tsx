@@ -10,7 +10,7 @@ function TechEl({ name, logo }: { name: string, logo: string }) {
 
 export default function Techstack() {
     return <div className="max-w-[680px] mx-auto bg-base-200 rounded-box p-4">
-        <h2 className="text-3xl font-Outfit" id="services">My Tech Stack</h2>
+        {/* <h2 className="text-3xl font-Outfit" id="services">My Tech Stack</h2> */}
         <div className="divider" >
             <h3 className="text-xl text-center font-bold font-Outfit pb-4 pt-2" id="backend">Backend</h3>
         </div>

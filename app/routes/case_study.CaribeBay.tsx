@@ -7,7 +7,7 @@ export default function CaribeBay() {
         <ProjectHead
             title="Prenota Attrazioni Caribe Bay"
             description={<>realizzata in collaborazione con <a target="_blank" rel="noopener noreferrer" className="link-accent" href="https://42night.club/">42Night S.R.L.</a></>}
-            icon={<img className="rounded-lg h-16 bg-white p-2 shrink-0 shadow-xl shadow-gray-400" src="/icons/caribebay_black.png" alt="Caribe Bay" />}
+            icon="/icon/caribebay_lg.png"
         />
         <p className="prose mx-auto">
             Abbiamo sviluppato un sistema di prenotazione smart per il gruppo Caribe Bay, parco a tema acquatico di Jesolo, che introduce il concetto di coda virtuale per le attrazioni. L'app permette agli ospiti di prenotare il proprio accesso a scivoli e attrazioni con un anticipo di qualche minuto, evitando così l'attesa fisica in coda. Questo sistema migliora l'esperienza degli ospiti, rendendoli più soddisfatti e liberi di esplorare il parco durante l'attesa, contribuendo così a un incremento potenziale dei consumi all'interno del parco.

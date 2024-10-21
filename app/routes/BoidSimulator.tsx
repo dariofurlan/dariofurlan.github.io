@@ -6,7 +6,7 @@ export default function BoidSimulator() {
         <ProjectHead
             title="Simulatore Distress Corsoradio VHF"
             description={<>realizzata in autonomia</>}
-            icon={<img className="rounded-xl h-16 w-16 shadow-xl shadow-gray-400" src="/icons/distress.png" alt="PythIA" />}
+            icon="/icon/distress.png"
         />
 
         <p className="prose">
