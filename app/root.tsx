@@ -133,6 +133,10 @@ export default function App() {
               <th className="text-right">SDI: </th>
               <td className="px-2 font-mono">M5UXCR1</td>
             </tr>
+            <tr>
+              <th className="text-right">PEC: </th>
+              <td className="px-2 font-mono">furlandario@pec.it</td>
+            </tr>
           </tbody>
         </table>
       </div>
