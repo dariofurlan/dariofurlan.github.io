@@ -1,7 +1,24 @@
+import { LinksFunction } from "@remix-run/cloudflare";
+import { MetaFunction } from "@remix-run/react";
 import NewsCard, { INewsPiece } from "~/components/NewsCard";
 import ProjectContainer from "~/components/ProjectContainer";
 import ProjectHead from "~/components/ProjectHead";
 
+export const links: LinksFunction = () => {
+    return [{
+        rel: 'canonical', href: "https://dariofurlan.it/case_study/Vanilla"
+    }];
+};
+
+export const meta: MetaFunction = () => {
+    return [
+        { title: "Vanilla Club App: Innovazione Digitale per Locali | Case Study di Dario Furlan" },
+        {
+            name: "description",
+            content: "Scopri come l'app Vanilla, sviluppata per il Vanilla Club Jesolo, trasforma l'esperienza in discoteca con QR code, gestione ordini, pagamenti sicuri e reportistica in tempo reale. Un case study di innovazione tecnologica a cura di Dario Furlan e 42Night."
+        },
+    ];
+};
 
 const news: INewsPiece[] = [
     {

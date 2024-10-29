@@ -1,5 +1,23 @@
+import { LinksFunction } from "@remix-run/cloudflare";
+import { MetaFunction } from "@remix-run/react";
 import ProjectContainer from "~/components/ProjectContainer";
 import ProjectHead from "~/components/ProjectHead";
+
+export const links: LinksFunction = () => {
+    return [{
+        rel: 'canonical', href: "https://dariofurlan.it/case_study/PythIA"
+    }];
+};
+
+export const meta: MetaFunction = () => {
+    return [
+        { title: "PythIA: Assistente Virtuale per Call Center | Case Study di Dario Furlan" },
+        {
+            name: "description",
+            content: "Scopri PythIA, l’assistente virtuale sviluppato da Dario Furlan per il supporto ai call center nel settore automobilistico. Basato su AI, PythIA fornisce analisi del sentimento e suggerimenti in tempo reale, migliorando le interazioni con i clienti e la qualità del servizio."
+        },
+    ];
+};
 
 export default function PythIA() {
     return <ProjectContainer>

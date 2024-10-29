@@ -1,5 +1,23 @@
+import { LinksFunction } from "@remix-run/cloudflare";
+import { MetaFunction } from "@remix-run/react";
 import ProjectContainer from "~/components/ProjectContainer";
 import ProjectHead from "~/components/ProjectHead";
+
+export const links: LinksFunction = () => {
+    return [{
+        rel: 'canonical', href: "https://dariofurlan.it/case_study/Docfiler"
+    }];
+};
+
+export const meta: MetaFunction = () => {
+    return [
+        { "title": "DocFiler: Portale per la Raccolta Documentale con SPID e Blockchain | Case Study di Dario Furlan" },
+        {
+            "name": "description",
+            "content": "Scopri DocFiler, il portale sviluppato da Dario Furlan per ESNA SOA, che facilita la raccolta documentale con accesso SPID e certificazione tramite blockchain. Un sistema avanzato per la gestione sicura e organizzata dei documenti per le certificazioni, semplificando i processi aziendali e migliorando l’efficienza."
+        }
+    ];
+};
 
 export default function Docfiler() {
     return <ProjectContainer>

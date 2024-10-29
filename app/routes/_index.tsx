@@ -5,7 +5,7 @@ import Techstack from "./techstack";
 export const meta: MetaFunction = () => {
   return [
     { title: "Dario Furlan" },
-    { name: "description", content: "Welcome to Remix!" },
+    { name: "description", content: "Scopri Dario Furlan, sviluppatore Full-Stack e specialista in Intelligenza Artificiale, che offre soluzioni software personalizzate in sviluppo web e mobile, e-commerce, integrazione cloud, cybersecurity e automazione innovativa. Con sede a Padova, Dario unisce consulenza strategica e competenza tecnica per potenziare le operazioni aziendali con software su misura, soluzioni AI e gestione robusta dei database. Esplora i servizi su misura per ogni esigenza digitale—dall'ottimizzazione SEO all'automazione avanzata basata sull'Intelligenza Artificiale." },
   ];
 };
 

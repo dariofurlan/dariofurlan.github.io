@@ -1,6 +1,23 @@
+import { LinksFunction } from "@remix-run/cloudflare";
+import { MetaFunction } from "@remix-run/react";
 import ProjectContainer from "~/components/ProjectContainer";
 import ProjectHead from "~/components/ProjectHead";
 
+export const links: LinksFunction = () => {
+    return [{
+        rel: 'canonical', href: "https://dariofurlan.it/case_study/CaribeBay"
+    }];
+};
+
+export const meta: MetaFunction = () => {
+    return [
+        { "title": "Caribe Bay: Sistema di Prenotazione Smart e Coda Virtuale | Case Study di Dario Furlan" },
+        {
+            "name": "description",
+            "content": "Scopri il sistema di prenotazione sviluppato da Dario Furlan per Caribe Bay, il parco acquatico di Jesolo. Questa innovazione introduce una coda virtuale per attrazioni, consentendo ai visitatori di evitare attese fisiche e migliorando l’esperienza complessiva del parco. Un case study di gestione intelligente per parchi a tema."
+        }
+    ];
+};
 
 export default function CaribeBay() {
     return <ProjectContainer>

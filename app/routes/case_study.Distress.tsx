@@ -1,5 +1,23 @@
+import { LinksFunction } from "@remix-run/cloudflare";
+import { MetaFunction } from "@remix-run/react";
 import ProjectContainer from "~/components/ProjectContainer";
 import ProjectHead from "~/components/ProjectHead";
+
+export const links: LinksFunction = () => {
+    return [{
+        rel: 'canonical', href: "https://dariofurlan.it/case_study/Distress"
+    }];
+};
+
+export const meta: MetaFunction = () => {
+    return [
+        { "title": "Distress: Simulatore Corsoradio VHF per Addestramento Marittimo | Case Study di Dario Furlan" },
+        {
+            "name": "description",
+            "content": "Esplora Distress, un simulatore di corsoradio VHF sviluppato da Dario Furlan per l'addestramento marittimo. Questo strumento innovativo permette ai naviganti di familiarizzare con i segnali di emergenza, migliorando preparazione e sicurezza senza la necessità di apparecchiature fisiche costose."
+        }
+    ];
+};
 
 export default function Distress() {
     return <ProjectContainer>
