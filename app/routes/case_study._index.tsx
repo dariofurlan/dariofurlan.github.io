@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from "react-router";
 
 
 export const projects: { name: string, icon: string, url: string, desc: string }[] = [
@@ -38,7 +38,7 @@ export default function CaseStudies() {
     return <ul className="flex flex-col flex-wrap max-w-[680px] mx-auto">
         {projects.map(project => (
             <li className="py-2" key={project.url}>
-                <Link className="bg-base-200 flex flex-row items-center p-4 rounded-2xl" to={project.url}>
+                <Link reloadDocument className="bg-base-200 flex flex-row items-center p-4 rounded-2xl" to={project.url}>
                     <img src={project.icon} alt={project.name} className="rounded-xl mr-6 bg-transparent h-12 w-12 shadow-xl shadow-gray-400" />
                     <span className="font-Outfit text-xl font-bold">{project.name}</span>
                 </Link>

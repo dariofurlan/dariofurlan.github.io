@@ -4,46 +4,31 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix vite:build",
-    "deploy": "npm run build && wrangler pages deploy",
-    "dev": "remix vite:dev",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "start": "wrangler pages dev ./build/client",
-    "typecheck": "tsc",
-    "typegen": "wrangler types",
-    "preview": "npm run build && wrangler pages dev",
-    "cf-typegen": "wrangler types"
+    "build": "react-router build",
+    "dev": "react-router dev",
+    "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
-    "@remix-run/cloudflare": "^2.13.1",
-    "@remix-run/cloudflare-pages": "^2.13.1",
-    "@remix-run/react": "^2.13.1",
-    "@tailwindcss/typography": "^0.5.15",
-    "daisyui": "^4.12.13",
+    "@react-router/fs-routes": "^7.8.1",
+    "@react-router/node": "^7.8.1",
+    "@tailwindcss/postcss": "^4.1.12",
     "isbot": "^5.1.17",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-router": "^7.0.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241011.0",
-    "@remix-run/dev": "^2.13.1",
+    "@react-router/dev": "^7.8.1",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
-    "@typescript-eslint/eslint-plugin": "^8.8.1",
-    "@typescript-eslint/parser": "^8.8.1",
     "autoprefixer": "^10.4.20",
-    "eslint": "^9.12.0",
-    "eslint-import-resolver-typescript": "^3.6.3",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsx-a11y": "^6.10.0",
-    "eslint-plugin-react": "^7.37.1",
-    "eslint-plugin-react-hooks": "^5.0.0",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
+    "daisyui": "^5.0.50",
+    "postcss": "^8.5.6",
+    "postcss-preset-env": "^10.2.4",
+    "tailwindcss": "^4.1.12",
     "typescript": "^5.6.3",
     "vite": "^5.4.8",
-    "vite-tsconfig-paths": "^5.0.1",
-    "wrangler": "^3.80.4"
+    "vite-tsconfig-paths": "^5.0.1"
   },
   "engines": {
     "node": ">=20.0.0"

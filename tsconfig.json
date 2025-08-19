@@ -6,18 +6,18 @@
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",
     "**/.client/**/*.tsx",
-    "tailwind.config.js"
+    "tailwind.config.js",
+    ".react-router/types/**/*"
   ],
   "compilerOptions": {
     "lib": [
       "DOM",
       "DOM.Iterable",
-      "ES2022"
+      "ES2022",
     ],
     "types": [
-      "@remix-run/cloudflare",
+      "@react-router/node",
       "vite/client",
-      "@cloudflare/workers-types/2023-07-01"
     ],
     "isolatedModules": true,
     "esModuleInterop": true,
@@ -31,6 +31,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
+    "rootDirs": [".", "./.react-router/types"],
     "paths": {
       "~/*": [
         "./app/*"

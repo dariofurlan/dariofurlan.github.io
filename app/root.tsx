@@ -1,21 +1,9 @@
-import type { LinksFunction } from "@remix-run/cloudflare";
-import {
-  Links,
-  Meta,
-  NavLink,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "@remix-run/react";
-
-import CodeIcon from "./icons/CodeIcon";
-import CompassIcon from "./icons/CompassIcon";
+import type { LinksFunction } from "react-router";
+import { Links, Meta, NavLink, Outlet, Scripts, ScrollRestoration } from "react-router";
 import EmailIcon from "./icons/EmailIcon";
 import GithubIcon from "./icons/GithubIcon";
 import GitlabIcon from "./icons/GitlabIcon";
-import StackIcon from "./icons/StackIcon";
 import "./style.css";
-import SellIcon from "./icons/SellIcon";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -42,11 +30,17 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
-        <ScrollRestoration />
         <Scripts />
+        <ScrollRestoration />
       </body>
     </html>
   );
+}
+
+export function HydrateFallback() {
+  return <>
+    <h1>Caricamento</h1>
+  </>
 }
 
 export default function App() {
@@ -71,30 +65,6 @@ export default function App() {
         </div>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1">
-            {/* <li>
-              <NavLink to="/">
-                <CodeIcon className="h-5 w-5" />
-                About Me
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="#case_study">
-                <CompassIcon className="h-5 w-5" />
-                Progetti
-              </NavLink>
-            </li> */}
-            {/* <li>
-              <NavLink to="/techstack/">
-                <StackIcon className="h-5 w-5" />
-                Tech Stack
-              </NavLink>
-            </li> */}
-            {/* <li>
-              <NavLink to="/services/">
-                <SellIcon className="h-5 w-5" />
-                Services
-              </NavLink>
-            </li> */}
             <li>
               <NavLink to="/#contact">
                 <EmailIcon className="h-5 w-5" />

@@ -1,4 +1,4 @@
-name: Deploy to Cloudflare Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,26 +6,43 @@ on:
       - master
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    name: Deploy to Cloudflare Pages
+    name: Deploy to GitHub Pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: '22.10'  # Adjust to your Node.js version
+
       - name: Install Dependencies
         run: npm ci
+
       - name: Build
         run: npm run build
-      - name: Publish
-        uses: cloudflare/wrangler-action@v3
+
+      - name: Upload artifact for deployment
+        uses: actions/upload-pages-artifact@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy
+          path: ./dist  # Path to the folder where Vite outputs the build files
+
+  deploy:
+    # Add a dependency to the build job
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages  # This sets the environment name to "github-pages"
+      url: ${{ steps.deployment.outputs.page_url }}  # Outputs the deployed URL after a successful deploy
+
+    permissions:
+      contents: read
+      deployments: write
+
+    steps:
+      # Deploy the build artifact to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

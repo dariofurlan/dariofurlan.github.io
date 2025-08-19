@@ -1,5 +1,5 @@
-import { LinksFunction } from "@remix-run/cloudflare";
-import { MetaFunction } from "@remix-run/react";
+import { LinksFunction } from "react-router";
+import { MetaFunction } from "react-router";
 import ProjectContainer from "~/components/ProjectContainer";
 import ProjectHead from "~/components/ProjectHead";
 
