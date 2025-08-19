@@ -38,8 +38,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}  # Outputs the deployed URL after a successful deploy
 
     permissions:
-      contents: read
-      deployments: write
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment originates from an appropriate source
 
     steps:
       # Deploy the build artifact to GitHub Pages
