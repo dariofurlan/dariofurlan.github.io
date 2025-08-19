@@ -27,7 +27,7 @@ jobs:
       - name: Upload artifact for deployment
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist  # Path to the folder where Vite outputs the build files
+          path: ./build/client/  # Path to the folder where Vite outputs the build files
 
   deploy:
     # Add a dependency to the build job
