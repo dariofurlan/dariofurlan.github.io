@@ -1,8 +1,9 @@
 import type { LinksFunction } from "react-router";
-import { Links, Meta, NavLink, Outlet, Scripts, ScrollRestoration } from "react-router";
-import EmailIcon from "./icons/EmailIcon";
+import { Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import GithubIcon from "./icons/GithubIcon";
 import GitlabIcon from "./icons/GitlabIcon";
+import FloatingContactButton from "./components/FloatingContactButton";
+import Breadcrumbs from "./components/Breadcrumbs";
 import "./style.css";
 
 export const links: LinksFunction = () => [
@@ -45,39 +46,29 @@ export function HydrateFallback() {
 
 export default function App() {
   return <>
-    <header className="p-2">
-      <div className="navbar bg-neutral text-neutral-content rounded-box font-Outfit">
-        <div className="flex-1">
-          <a href="/" className="btn btn-ghost text-xl flex flex-row">
-            Dario Furlan
-            <svg className="w-5" viewBox="0 0 18.5 33.434" xmlns="http://www.w3.org/2000/svg">
-              <path d="m0.00001,33.434l0,-4.5l18,0l0,4.5l-18,0z" >
-                <animate
-                  attributeType="XML"
-                  attributeName="fill"
-                  values={`#d7dde4ff;#d7dde400;#d7dde4ff`}
-                  dur="1s"
-                  calcMode="discrete"
-                  repeatCount="indefinite" />
-              </path>
-            </svg >
-          </a>
-        </div>
-        <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <NavLink to="/#contact">
-                <EmailIcon className="h-5 w-5" />
-                Contact
-              </NavLink>
-            </li>
-          </ul>
-        </div>
+    <header className="py-4 px-6">
+      <div className="flex justify-center">
+        <a href="/" className="text-2xl font-bold font-Outfit text-base-content hover:text-primary transition-colors flex items-center gap-2">
+          Dario Furlan
+          <svg className="w-4 h-4" viewBox="0 0 18.5 33.434" xmlns="http://www.w3.org/2000/svg">
+            <path d="m0.00001,33.434l0,-4.5l18,0l0,4.5l-18,0z" fill="currentColor">
+              <animate
+                attributeType="XML"
+                attributeName="fill"
+                values={`currentColor;transparent;currentColor`}
+                dur="2s"
+                calcMode="discrete"
+                repeatCount="indefinite" />
+            </path>
+          </svg>
+        </a>
       </div>
     </header>
-    <main className="lg:container lg:mx-auto p-4">
+    <main className="lg:container lg:mx-auto px-4">
+      <Breadcrumbs />
       <Outlet />
     </main>
+    <FloatingContactButton />
     <footer className="footer bg-neutral text-neutral-content items-center p-4">
       <aside className="grid-flow-col items-center">
         <svg

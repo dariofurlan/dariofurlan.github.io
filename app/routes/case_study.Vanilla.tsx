@@ -1,4 +1,4 @@
-import { LinksFunction } from "react-router";
+import { LinksFunction, NavLink } from "react-router";
 import { MetaFunction } from "react-router";
 import NewsCard, { INewsPiece } from "~/components/NewsCard";
 import ProjectContainer from "~/components/ProjectContainer";
@@ -19,6 +19,10 @@ export const meta: MetaFunction = () => {
         },
     ];
 };
+
+export const handle = {
+  breadcrumb: () => <NavLink to="case_study/Vanilla">Vanilla</NavLink>,
+}
 
 const news: INewsPiece[] = [
     {
@@ -57,42 +61,206 @@ const news: INewsPiece[] = [
 
 export default function Vanilla() {
     return <ProjectContainer>
-        <ProjectHead
-            title="Vanilla Club Jesolo"
-            description={<>realizzata in collaborazione con <a target="_blank" rel="noopener noreferrer" className="link-accent" href="https://42night.club/">42Night S.R.L.</a></>}
-            icon="/icon/vanilla_lg.png"
-        />
-
-        <p className="prose mx-auto">
-            L'app offre ai frequentatori delle discoteche un'esperienza completamente digitalizzata: consente di entrare, effettuare ordini, pagare e uscire grazie a un innovativo QR Code dinamico anticontraffazione, semplificando l'interazione con il locale. Un aspetto fondamentale è la <b className="font-bold">sicurezza</b>: l'app garantisce un ambiente sicuro per gli ospiti, limitando l'accesso a persone malintenzionate e contribuendo a creare una serata tranquilla per tutti.
-        </p>
-        <p className="prose mx-auto">
-            Sul lato amministrativo, l'app fornisce un sistema di reportistica avanzata per monitorare in tempo reale l'andamento delle metriche chiave, permettendo di prendere decisioni strategiche durante la serata stessa. Inoltre, l'app permette di <b>minimizzare le perdite economiche</b> del locale, con una percentuale di mancati pagamenti inferiore allo 0,05%. L'app integra un sistema POS, gestione aziendale tramite PMS, controllo del magazzino (carico/scarico) e gestione di stampanti fiscali e comande.
-        </p>
-        <h4 className="font-Outfit text-xl font-bold pt-4 pb-2 flex flex-row items-center">
-            <svg className="w-8 h-8 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="m136-240-56-56 296-298 160 160 208-206H640v-80h240v240h-80v-104L536-320 376-480 136-240Z" /></svg>
-            Statistiche
-        </h4>
-        <div className="stats self-center stats-vertical sm:stats-horizontal shadow-lg">
-            <div className="stat place-items-center">
-                <div className="stat-title">Ospiti Iscritti</div>
-                <div className="stat-value text-success">100.000 🕺🏻</div>
-                <div className="stat-desc">dal 2022</div>
-            </div>
-            <div className="stat place-items-center">
-                <div className="stat-title">Malintenzionati Respinti</div>
-                <div className="stat-value text-error">1.300 ✋🏻</div>
-                <div className="stat-desc">dal 2022</div>
-            </div>
-            <div className="stat place-items-center">
-                <div className="stat-title">Perdite Minimizzate</div>
-                <div className="stat-value text-success">&lt;0.05% 💸</div>
-                <div className="stat-desc text-error">&#126;10% (senza App)</div>
+        {/* Hero Section */}
+        <div className="hero bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-xl mb-8">
+            <div className="hero-content text-center">
+                <div className="max-w-4xl">
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-6">
+                        <img src="/icon/vanilla_lg.png" alt="Vanilla Club" className="w-20 h-20 rounded-2xl shadow-xl" />
+                        <div>
+                            <h1 className="text-4xl font-bold font-Outfit">Vanilla Club</h1>
+                            <p className="text-lg text-base-content/80">Digitalizzazione Completa dell'Esperienza Nightlife</p>
+                        </div>
+                    </div>
+                    <p className="text-sm text-base-content/70 mb-4">
+                        realizzata in collaborazione con <a target="_blank" rel="noopener noreferrer" className="link link-accent" href="https://42night.club/">42Night S.R.L.</a>
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-2">
+                        <div className="badge badge-primary">QR Technology</div>
+                        <div className="badge badge-secondary">Digital Payments</div>
+                        <div className="badge badge-accent">Security System</div>
+                        <div className="badge badge-outline">Real-time Analytics</div>
+                    </div>
+                </div>
             </div>
         </div>
-        <h4 className="font-Outfit text-xl font-bold pt-4 pb-2 flex flex-row items-center"><svg className="w-8 h-8 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor"><path d="M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm240-182v-196l-98 58H160v80h182l98 58Zm120 36v-268q27 24 43.5 58.5T620-480q0 41-16.5 75.5T560-346ZM300-480Z" /></svg>Dicono di noi <div className="font-normal text-xs text-gray-500 italic ml-4">(Ciao mamma!)</div></h4>
-        <div className="w-full flex flex-row overflow-x-auto px-4 py-6">
-            {news.map((newsPiece, index) => <NewsCard key={index} {...newsPiece} />)}
+
+        {/* Project Overview */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-12">
+            <div className="lg:col-span-2 space-y-6">
+                <div className="card bg-base-100 shadow-lg">
+                    <div className="card-body">
+                        <h2 className="card-title font-Outfit text-2xl">🎯 La Sfida</h2>
+                        <p className="text-base-content/80">
+                            I locali notturni affrontavano problemi critici: gestione caotica degli ingressi, perdite economiche significative (~10%), 
+                            difficoltà nel controllo della sicurezza e mancanza di dati analytici per ottimizzare le operazioni.
+                        </p>
+                    </div>
+                </div>
+
+                <div className="card bg-base-100 shadow-lg">
+                    <div className="card-body">
+                        <h2 className="card-title font-Outfit text-2xl">💡 L'Innovazione</h2>
+                        <p className="text-base-content/80 mb-4">
+                            Ho sviluppato un ecosistema digitale completo che trasforma ogni aspetto dell'esperienza in discoteca: 
+                            dal check-in sicuro tramite QR dinamico anticontraffazione, agli ordini contactless, fino ai pagamenti integrati.
+                        </p>
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="stat bg-base-200 rounded-lg">
+                                <div className="stat-title">Sicurezza</div>
+                                <div className="stat-value text-lg">QR Dinamico</div>
+                                <div className="stat-desc">Anti-contraffazione</div>
+                            </div>
+                            <div className="stat bg-base-200 rounded-lg">
+                                <div className="stat-title">Pagamenti</div>
+                                <div className="stat-value text-lg">Contactless</div>
+                                <div className="stat-desc">POS integrato</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="space-y-6">
+                <div className="card bg-base-100 shadow-lg">
+                    <div className="card-body">
+                        <h3 className="card-title font-Outfit">📊 Risultati Straordinari</h3>
+                        <div className="space-y-3">
+                            <div className="flex justify-between items-center">
+                                <span className="text-sm">Perdite Economiche</span>
+                                <span className="font-bold text-success">&lt;0.05%</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                                <span className="text-sm">Utenti Registrati</span>
+                                <span className="font-bold text-info">100K+</span>
+                            </div>
+                            <div className="flex justify-between items-center">
+                                <span className="text-sm">Incidenti Prevenuti</span>
+                                <span className="font-bold text-warning">1,300+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="card bg-base-100 shadow-lg">
+                    <div className="card-body">
+                        <h3 className="card-title font-Outfit">🛠️ Tech Stack</h3>
+                        <div className="flex flex-wrap gap-2">
+                            <div className="badge badge-sm">React Native</div>
+                            <div className="badge badge-sm">Node.js</div>
+                            <div className="badge badge-sm">PostgreSQL</div>
+                            <div className="badge badge-sm">Redis</div>
+                            <div className="badge badge-sm">Socket.io</div>
+                            <div className="badge badge-sm">Stripe</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Features Grid */}
+        <div className="mb-12">
+            <h2 className="text-3xl font-bold font-Outfit text-center mb-8">🚀 Ecosystem Digitale Completo</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="card bg-gradient-to-br from-purple-500/5 to-purple-500/10 shadow-lg">
+                    <div className="card-body text-center">
+                        <div className="text-4xl mb-4">🔐</div>
+                        <h3 className="card-title justify-center font-Outfit text-sm">Check-in Sicuro</h3>
+                        <p className="text-xs">QR dinamico anticontraffazione per controllo accessi avanzato</p>
+                    </div>
+                </div>
+                
+                <div className="card bg-gradient-to-br from-blue-500/5 to-blue-500/10 shadow-lg">
+                    <div className="card-body text-center">
+                        <div className="text-4xl mb-4">📱</div>
+                        <h3 className="card-title justify-center font-Outfit text-sm">Ordini Contactless</h3>
+                        <p className="text-xs">Sistema di ordinazione digitale con menu interattivo</p>
+                    </div>
+                </div>
+                
+                <div className="card bg-gradient-to-br from-green-500/5 to-green-500/10 shadow-lg">
+                    <div className="card-body text-center">
+                        <div className="text-4xl mb-4">💳</div>
+                        <h3 className="card-title justify-center font-Outfit text-sm">Pagamenti Integrati</h3>
+                        <p className="text-xs">POS digitale con gestione fiscale automatizzata</p>
+                    </div>
+                </div>
+                
+                <div className="card bg-gradient-to-br from-orange-500/5 to-orange-500/10 shadow-lg">
+                    <div className="card-body text-center">
+                        <div className="text-4xl mb-4">📈</div>
+                        <h3 className="card-title justify-center font-Outfit text-sm">Analytics Live</h3>
+                        <p className="text-xs">Reportistica in tempo reale per decisioni strategiche</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Impact Stats */}
+        <div className="card bg-gradient-to-r from-success/10 to-success/5 shadow-xl mb-8">
+            <div className="card-body">
+                <h2 className="card-title font-Outfit text-2xl text-center w-full justify-center mb-6">🎯 Impatto Rivoluzionario</h2>
+                <div className="grid md:grid-cols-3 gap-6">
+                    <div className="text-center">
+                        <div className="stat-value text-success">100K+ 🕺🏻</div>
+                        <div className="stat-title">Ospiti Iscritti</div>
+                        <div className="stat-desc">Crescita organica dal 2022</div>
+                    </div>
+                    <div className="text-center">
+                        <div className="stat-value text-error">1,300 ✋🏻</div>
+                        <div className="stat-title">Accessi Negati</div>
+                        <div className="stat-desc">Persone malintenzionate respinte</div>
+                    </div>
+                    <div className="text-center">
+                        <div className="stat-value text-success">&lt;0.05% 💸</div>
+                        <div className="stat-title">Perdite Economiche</div>
+                        <div className="stat-desc">vs ~10% senza l'app</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Learning & Growth */}
+        <div className="card bg-base-100 shadow-lg mb-8">
+            <div className="card-body">
+                <h2 className="card-title font-Outfit text-2xl">🌟 Competenze Acquisite</h2>
+                <div className="grid md:grid-cols-2 gap-6 mt-4">
+                    <div>
+                        <h3 className="font-semibold mb-2">Innovazione Tecnologica</h3>
+                        <ul className="list-disc list-inside space-y-1 text-sm text-base-content/80">
+                            <li>Sviluppo QR dinamici anti-contraffazione</li>
+                            <li>Integrazione sistemi POS e stampanti fiscali</li>
+                            <li>Architettura real-time per analytics live</li>
+                            <li>Mobile app development per ambienti critici</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="font-semibold mb-2">Business Impact</h3>
+                        <ul className="list-disc list-inside space-y-1 text-sm text-base-content/80">
+                            <li>Riduzione drastica delle perdite economiche</li>
+                            <li>Miglioramento della sicurezza del locale</li>
+                            <li>Ottimizzazione operational tramite data</li>
+                            <li>Trasformazione digitale dell'industria nightlife</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {/* Media Coverage */}
+        <div className="mb-8">
+            <h2 className="text-3xl font-bold font-Outfit text-center mb-8 flex items-center justify-center gap-3">
+                <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                    <path d="M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm240-182v-196l-98 58H160v80h182l98 58Zm120 36v-268q27 24 43.5 58.5T620-480q0 41-16.5 75.5T560-346ZM300-480Z"/>
+                </svg>
+                Copertura Mediatica
+                <div className="text-sm font-normal text-base-content/60 italic">(Ciao mamma! 👋)</div>
+            </h2>
+            <div className="overflow-x-auto pb-4">
+                <div className="flex gap-4 w-max">
+                    {news.map((newsPiece, index) => <NewsCard key={index} {...newsPiece} />)}
+                </div>
+            </div>
         </div>
     </ProjectContainer>
 }
