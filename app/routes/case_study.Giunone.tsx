@@ -1,27 +1,25 @@
-import { LinksFunction } from "react-router";
+import { LinksFunction, NavLink } from "react-router";
 import { MetaFunction } from "react-router";
 import ProjectContainer from "~/components/ProjectContainer";
 
 export const links: LinksFunction = () => {
     return [{
-        rel: 'canonical', href: "https://dariofurlan.com/case_study/TermeDiGiunone"
+        rel: 'canonical', href: "https://dariofurlan.com/case_study/Giunone"
     }];
 };
 
 export const meta: MetaFunction = () => {
   return [
     { title: "Terme di Giunone: Sistema Bigliettazione QR Dinamici | Case Study di Dario Furlan" },
-    { name: "description", content: "Scopri come il sistema di bigliettazione digitale di Terme di Giunone, basato sui QR dinamici di Vanilla, trasforma l'accesso alle terme con abbonamenti digitali e controllo anti-contraffazione." },
+    { name: "description", content: "Scopri come il sistema di bigliettazione digitale di Terme di Giunone, basato sui QR dinamici, trasforma l'accesso alle terme con abbonamenti digitali e controllo anti-contraffazione." },
   ];
 };
 
 export const handle = {
-  breadcrumb: () => ({
-    label: "TermeDiGiunone.tsx"
-  })
-};
+    breadcrumb: () => <NavLink to="/case_study/Giunone">Terme di Giunone</NavLink>,
+}
 
-export default function TermeDiGiunone() {
+export default function Giunone() {
     return <ProjectContainer>
         {/* Hero Section */}
         <div className="hero bg-gradient-to-r from-blue-500/10 to-teal-500/10 rounded-xl mb-8">

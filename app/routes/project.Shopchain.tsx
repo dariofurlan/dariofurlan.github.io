@@ -1,5 +1,11 @@
+import { NavLink } from "react-router";
 import ProjectContainer from "~/components/ProjectContainer";
 import ProjectHead from "~/components/ProjectHead";
+
+
+export const handle = {
+    breadcrumb: () => <NavLink to="/project/PythIA">PythIA</NavLink>,
+}
 
 export default function Shopchain() {
     return <ProjectContainer>

@@ -1,5 +1,4 @@
-import { LinksFunction } from "react-router";
-import { MetaFunction } from "react-router";
+import { LinksFunction, MetaFunction, NavLink } from "react-router";
 import ProjectContainer from "~/components/ProjectContainer";
 
 export const links: LinksFunction = () => {
@@ -17,6 +16,10 @@ export const meta: MetaFunction = () => {
         }
     ];
 };
+
+export const handle = {
+    breadcrumb: () => <NavLink to="/case_study/CaribeBay">CaribeBay</NavLink>,
+}
 
 export default function CaribeBay() {
     return <ProjectContainer>

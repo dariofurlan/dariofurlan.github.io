@@ -1,4 +1,4 @@
-import { LinksFunction } from "react-router";
+import { LinksFunction, NavLink } from "react-router";
 import { MetaFunction } from "react-router";
 import ProjectContainer from "~/components/ProjectContainer";
 import PDFPresentation from "~/components/PDFPresentation";
@@ -20,10 +20,8 @@ export const meta: MetaFunction = () => {
 };
 
 export const handle = {
-    breadcrumb: () => ({
-        label: "PythIA.tsx"
-    })
-};
+    breadcrumb: () => <NavLink to="/case_study/PythIA">PythIA</NavLink>,
+}
 
 export default function PythIA() {
     return <ProjectContainer>

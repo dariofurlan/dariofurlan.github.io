@@ -21,7 +21,7 @@ export const meta: MetaFunction = () => {
 };
 
 export const handle = {
-  breadcrumb: () => <NavLink to="case_study/Vanilla">Vanilla</NavLink>,
+    breadcrumb: () => <NavLink to="case_study/Vanilla">Vanilla</NavLink>,
 }
 
 const news: INewsPiece[] = [
@@ -92,7 +92,7 @@ export default function Vanilla() {
                     <div className="card-body">
                         <h2 className="card-title font-Outfit text-2xl">🎯 La Sfida</h2>
                         <p className="text-base-content/80">
-                            I locali notturni affrontavano problemi critici: gestione caotica degli ingressi, perdite economiche significative (~10%), 
+                            I locali notturni affrontavano problemi critici: gestione caotica degli ingressi, perdite economiche significative (~10%),
                             difficoltà nel controllo della sicurezza e mancanza di dati analytici per ottimizzare le operazioni.
                         </p>
                     </div>
@@ -102,7 +102,7 @@ export default function Vanilla() {
                     <div className="card-body">
                         <h2 className="card-title font-Outfit text-2xl">💡 L'Innovazione</h2>
                         <p className="text-base-content/80 mb-4">
-                            Ho sviluppato un ecosistema digitale completo che trasforma ogni aspetto dell'esperienza in discoteca: 
+                            Ho sviluppato un ecosistema digitale completo che trasforma ogni aspetto dell'esperienza in discoteca:
                             dal check-in sicuro tramite QR dinamico anticontraffazione, agli ordini contactless, fino ai pagamenti integrati.
                         </p>
                         <div className="grid grid-cols-2 gap-4">
@@ -169,7 +169,7 @@ export default function Vanilla() {
                         <p className="text-xs">QR dinamico anticontraffazione per controllo accessi avanzato</p>
                     </div>
                 </div>
-                
+
                 <div className="card bg-gradient-to-br from-blue-500/5 to-blue-500/10 shadow-lg">
                     <div className="card-body text-center">
                         <div className="text-4xl mb-4">📱</div>
@@ -177,7 +177,7 @@ export default function Vanilla() {
                         <p className="text-xs">Sistema di ordinazione digitale con menu interattivo</p>
                     </div>
                 </div>
-                
+
                 <div className="card bg-gradient-to-br from-green-500/5 to-green-500/10 shadow-lg">
                     <div className="card-body text-center">
                         <div className="text-4xl mb-4">💳</div>
@@ -185,7 +185,7 @@ export default function Vanilla() {
                         <p className="text-xs">POS digitale con gestione fiscale automatizzata</p>
                     </div>
                 </div>
-                
+
                 <div className="card bg-gradient-to-br from-orange-500/5 to-orange-500/10 shadow-lg">
                     <div className="card-body text-center">
                         <div className="text-4xl mb-4">📈</div>
@@ -251,7 +251,7 @@ export default function Vanilla() {
         <div className="mb-8">
             <h2 className="text-3xl font-bold font-Outfit text-center mb-8 flex items-center justify-center gap-3">
                 <svg className="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
-                    <path d="M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm240-182v-196l-98 58H160v80h182l98 58Zm120 36v-268q27 24 43.5 58.5T620-480q0 41-16.5 75.5T560-346ZM300-480Z"/>
+                    <path d="M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm240-182v-196l-98 58H160v80h182l98 58Zm120 36v-268q27 24 43.5 58.5T620-480q0 41-16.5 75.5T560-346ZM300-480Z" />
                 </svg>
                 Copertura Mediatica
                 <div className="text-sm font-normal text-base-content/60 italic">(Ciao mamma! 👋)</div>

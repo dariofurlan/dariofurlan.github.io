@@ -2,6 +2,12 @@ import { Link } from "react-router";
 import { useState } from "react";
 import type { Moment } from "~/data/moments";
 
+const dateFormatter = new Intl.DateTimeFormat('it-IT', { 
+  year: 'numeric', 
+  month: 'long', 
+  day: 'numeric' 
+});
+
 interface MomentsGalleryProps {
   moments: Moment[];
 }
@@ -22,19 +28,19 @@ function MomentModal({ moment, isOpen, onClose }: MomentModalProps) {
 
   return (
     <div className={`modal ${isOpen ? 'modal-open' : ''}`}>
-      <div className="modal-box max-w-2xl p-0 overflow-hidden">
-        <button 
+      <div className="modal-box max-w-2xl max-h-[90vh] p-0 overflow-hidden flex flex-col">
+        <button
           className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 z-10"
           onClick={onClose}
         >
           ✕
         </button>
-        
-        <figure className="relative aspect-[3/4] overflow-hidden">
-          <img 
+
+        <figure className="relative max-h-[50vh] overflow-hidden flex-shrink-0">
+          <img
             src={moment.image}
             alt={moment.alt}
-            className="object-cover w-full h-full"
+            className="object-contain w-full h-full max-h-[50vh]"
           />
           <div className="absolute top-4 left-4">
             <div className={`badge badge-${moment.badgeColor} badge-lg`}>
@@ -42,16 +48,16 @@ function MomentModal({ moment, isOpen, onClose }: MomentModalProps) {
             </div>
           </div>
         </figure>
-        
-        <div className="p-6">
+
+        <div className="p-6 overflow-y-auto flex-1">
           <div className="flex items-center gap-3 text-sm text-base-content/70 mb-4">
-            <span>📅 {moment.date}</span>
+            <span>📅 {dateFormatter.format(moment.date)}</span>
             <span>•</span>
             <span>📍 {moment.location}</span>
           </div>
           <h3 className="text-2xl font-bold font-Outfit mb-4">{moment.title}</h3>
           <p className="text-base leading-relaxed">{moment.description}</p>
-          
+
           <div className="mt-6 flex justify-end">
             <button className="btn btn-primary" onClick={onClose}>
               Chiudi
@@ -66,13 +72,13 @@ function MomentModal({ moment, isOpen, onClose }: MomentModalProps) {
 
 function MomentCard({ moment, onClick }: MomentCardProps) {
   return (
-    <div 
+    <div
       className="card bg-base-200 shadow-xl overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer hover:scale-[1.02]"
       onClick={onClick}
     >
       <figure className="relative aspect-video overflow-hidden">
-        <img 
-          src={moment.image}
+        <img
+          src={moment.thumbnail ?? moment.image}
           alt={moment.alt}
           className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
         />
@@ -93,7 +99,7 @@ function MomentCard({ moment, onClick }: MomentCardProps) {
       </figure>
       <div className="card-body p-4">
         <div className="flex items-center gap-2 text-xs text-base-content/70 mb-2">
-          <span>📅 {moment.date}</span>
+          <span>📅 {dateFormatter.format(moment.date)}</span>
           <span>•</span>
           <span>📍 {moment.location}</span>
         </div>
@@ -126,24 +132,24 @@ export function MomentsGallery({ moments }: MomentsGalleryProps) {
       <h2 className="text-3xl font-bold font-Outfit text-center mb-12">
         📸 Galleria Momenti
       </h2>
-      
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
         {moments.map((moment) => (
-          <MomentCard 
-            key={moment.id} 
-            moment={moment} 
+          <MomentCard
+            key={moment.id}
+            moment={moment}
             onClick={() => handleMomentClick(moment)}
           />
         ))}
       </div>
-      
+
       <div className="text-center">
         <Link to="/case_study" className="btn btn-primary btn-wide">
           🗂️ Esplora Portfolio Completo
         </Link>
       </div>
 
-      <MomentModal 
+      <MomentModal
         moment={selectedMoment}
         isOpen={isModalOpen}
         onClose={handleModalClose}

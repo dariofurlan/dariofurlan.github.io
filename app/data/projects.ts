@@ -64,7 +64,7 @@ export const projects: Project[] = [
     id: 'terme-di-giunone',
     name: 'Terme di Giunone',
     icon: '/icon/terme-giunone_lg.png',
-    url: '/case_study/TermeDiGiunone',
+    url: '/case_study/Giunone',
     description: 'Sistema di bigliettazione digitale con QR dinamici per terme: gestione abbonamenti, anti-contraffazione e accessi contactless per il settore termale.',
     tags: ['QR Dynamic', 'Digital Ticketing', 'Wellness', 'Anti-counterfeiting'],
     category: 'Digital Innovation',

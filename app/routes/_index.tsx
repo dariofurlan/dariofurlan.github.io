@@ -49,6 +49,7 @@ export default function Index() {
               <div className="mt-4">
                 <h4 className="font-semibold text-sm mb-2">Progetti Principali:</h4>
                 <ul className="space-y-1 text-sm">
+                  <li>• <Link to="/project/ErasmusCork2018" className="link link-accent">Erasmus+ Cork Experience</Link></li>
                   <li>• Prime applicazioni web</li>
                   <li>• Progetti di automazione</li>
                   <li>• Fondamenti di programmazione</li>
@@ -71,9 +72,9 @@ export default function Index() {
               <div className="mt-4">
                 <h4 className="font-semibold text-sm mb-2">Progetti Significativi:</h4>
                 <ul className="space-y-1 text-sm">
-                  <li>• <Link to="/case_study/Distress" className="link link-accent">Distress Simulator</Link></li>
-                  <li>• Algoritmi e strutture dati</li>
-                  <li>• Progetti di sviluppo web</li>
+                  <li>• <Link to="/project/Scissorhands2022" className="link link-accent">Barber Scissorhands</Link> (Web Tech)</li>
+                  <li>• <Link to="/project/Pao2020" className="link link-accent">Aquarius Ecosystem</Link> (OOP)</li>
+                  <li>• <Link to="/project/BaseDati2020" className="link link-accent">WeCare Database</Link> (Database)</li>
                 </ul>
               </div>
             </div>
@@ -91,10 +92,28 @@ export default function Index() {
               <div className="mt-4">
                 <h4 className="font-semibold text-sm mb-2">Progetti di Eccellenza:</h4>
                 <ul className="space-y-1 text-sm">
-                  <li>• <Link to="/case_study/PythIA" className="link link-accent">PythIA AI Assistant</Link></li>
-                  <li>• <Link to="/BoidSimulator" className="link link-accent">Boid Simulation</Link></li>
-                  <li>• Machine Learning avanzato</li>
+                  <li>• <Link to="/project/PrivacyVision2025" className="link link-accent">Privacy-Preserving Vision</Link> (Vision)</li>
+                  <li>• <Link to="/project/DNABERT2025" className="link link-accent">DNABERT Research</Link> (ML)</li>
+                  <li>• <Link to="/case_study/PythIA" className="link link-accent">PythIA AI Assistant</Link> (Tesi)</li>
                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Academic Projects CTA */}
+        <div className="text-center mt-8">
+          <div className="card bg-gradient-to-r from-primary/10 to-secondary/10 shadow-xl">
+            <div className="card-body">
+              <h3 className="card-title justify-center font-Outfit text-xl">Esplora Tutti i Progetti Accademici</h3>
+              <p className="text-base-content/80">
+                Scopri il percorso formativo completo attraverso i progetti universitari: 
+                dalla programmazione ad oggetti all'intelligenza artificiale.
+              </p>
+              <div className="card-actions justify-center mt-4">
+                <Link to="/project" className="btn btn-primary">
+                  Portfolio Progetti Accademici
+                </Link>
               </div>
             </div>
           </div>
@@ -135,19 +154,18 @@ export default function Index() {
                 <div>
                   <h4 className="font-semibold mb-2">Progetti Principali:</h4>
                   <ul className="space-y-1 text-sm">
-                    <li>• <Link to="/case_study/PythIA" className="link link-accent">PythIA - AI Call Center Assistant</Link></li>
-                    <li>• Analisi del sentiment in tempo reale</li>
-                    <li>• Integrazione di modelli di machine learning</li>
+                    <li>• <Link to="/case_study/PythIA" className="link link-accent">PythIA - AI Call Center Assistant</Link> (tesi triennale)</li>
+                    <li>• <Link to="/case_study/Docfiler" className="link link-accent">DocFiler - Blockchain Document Management</Link></li>
                   </ul>
                 </div>
-                <div>
+                {/* <div>
                   <h4 className="font-semibold mb-2">Sfide & Apprendimenti:</h4>
                   <ul className="space-y-1 text-sm">
                     <li>• Prima esperienza con AI in produzione</li>
                     <li>• Gestione di big data</li>
                     <li>• Collaborazione con team enterprise</li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -170,16 +188,17 @@ export default function Index() {
                   <ul className="space-y-1 text-sm">
                     <li>• <Link to="/case_study/Vanilla" className="link link-accent">Vanilla - Nightclub App</Link></li>
                     <li>• <Link to="/case_study/CaribeBay" className="link link-accent">Caribe Bay Booking System</Link></li>
+                    <li>• <Link to="/case_study/Giunone" className="link link-accent">Terme di Giunone - Digital Ticketing</Link></li>
                   </ul>
                 </div>
-                <div>
+                {/* <div>
                   <h4 className="font-semibold mb-2">Competenze Acquisite:</h4>
                   <ul className="space-y-1 text-sm">
                     <li>• Leadership tecnica</li>
                     <li>• Product management</li>
                     <li>• Visione imprenditoriale</li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -201,19 +220,19 @@ export default function Index() {
                 <div>
                   <h4 className="font-semibold mb-2">Progetti Indipendenti:</h4>
                   <ul className="space-y-1 text-sm">
-                    <li>• <Link to="/case_study/Docfiler" className="link link-accent">Docfiler - Blockchain Document Management</Link></li>
+                    <li>• <Link to="/case_study/Distress" className="link link-accent">Distress Simulator - Maritime Training</Link></li>
                     <li>• Consulenza AI per PMI</li>
                     <li>• Sviluppo full-stack custom</li>
                   </ul>
                 </div>
-                <div>
+                {/* <div>
                   <h4 className="font-semibold mb-2">Infinity Stones Collezionate:</h4>
                   <ul className="space-y-1 text-sm">
                     <li>• Gestione clienti enterprise</li>
                     <li>• Architetture cloud-native</li>
                     <li>• Business development</li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -337,7 +356,7 @@ export default function Index() {
               Se rappresenti un'organizzazione no-profit o hai un'idea che può fare la differenza nella comunità, 
               parliamone. Valuto con piacere collaborazioni pro bono per progetti con impatto sociale positivo.
             </p>
-            <a href="#contact" className="btn btn-primary">Contattami per il Sociale</a>
+            <a href="#contact" className="btn btn-primary">Contattami</a>
           </div>
         </div>
       </section>
