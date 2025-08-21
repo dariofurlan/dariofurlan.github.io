@@ -30,6 +30,18 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <script defer data-domain="dariofurlan.com" src="https://plausible.io/js/script.outbound-links.js"></script>
       </head>
       <body>
+        <div className="construction-background">
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+          <div className="construction-text">SITO IN COSTRUZIONE</div>
+        </div>
         {children}
         <Scripts />
         <ScrollRestoration />
