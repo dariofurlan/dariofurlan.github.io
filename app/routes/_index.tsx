@@ -25,8 +25,8 @@ export default function Index() {
             <h1 className="text-4xl lg:text-5xl font-bold font-Outfit">Dario Furlan</h1>
             <p className="text-xl text-base-content/80">Sviluppatore Full-Stack & Specialista AI</p>
             <p className="prose prose-lg max-w-none">
-              Nato nel 2000, vivo e lavoro a Padova come sviluppatore full-stack freelance. 
-              Programmo professionalmente dal 2018, con una passione per il codice iniziata a 15 anni. 
+              Nato nel 2000, vivo e lavoro a Padova come sviluppatore full-stack freelance.
+              Programmo professionalmente dal 2018, con una passione per il codice iniziata a 15 anni.
               Mi specializzo in soluzioni eleganti ed efficienti, con un approccio che un professore ha definito "estroso".
             </p>
           </div>
@@ -47,7 +47,7 @@ export default function Index() {
               <p className="text-sm text-base-content/70">Padova</p>
               <p className="text-sm mt-2">Diploma in Informatica e Telecomunicazioni</p>
               <div className="mt-4">
-                <h4 className="font-semibold text-sm mb-2">Progetti Principali:</h4>
+                <h4 className="font-semibold text-sm mb-2">Progetti Significativi:</h4>
                 <ul className="space-y-1 text-sm">
                   <li>• <Link to="/project/ErasmusCork2018" className="link link-accent">Erasmus+ Cork Experience</Link></li>
                   <li>• Prime applicazioni web</li>
@@ -75,6 +75,7 @@ export default function Index() {
                   <li>• <Link to="/project/Scissorhands2022" className="link link-accent">Barber Scissorhands</Link> (Web Tech)</li>
                   <li>• <Link to="/project/Pao2020" className="link link-accent">Aquarius Ecosystem</Link> (OOP)</li>
                   <li>• <Link to="/project/BaseDati2020" className="link link-accent">WeCare Database</Link> (Database)</li>
+                  <li>• <Link to="/case_study/PythIA" className="link link-accent">PythIA AI Assistant</Link> (Tesi)</li>
                 </ul>
               </div>
             </div>
@@ -90,24 +91,23 @@ export default function Index() {
               <p className="text-sm text-base-content/70">Università di Padova</p>
               <p className="text-sm mt-2">Artificial Intelligence (Computer Science)</p>
               <div className="mt-4">
-                <h4 className="font-semibold text-sm mb-2">Progetti di Eccellenza:</h4>
+                <h4 className="font-semibold text-sm mb-2">Progetti Significativi:</h4>
                 <ul className="space-y-1 text-sm">
                   <li>• <Link to="/project/PrivacyVision2025" className="link link-accent">Privacy-Preserving Vision</Link> (Vision)</li>
                   <li>• <Link to="/project/DNABERT2025" className="link link-accent">DNABERT Research</Link> (ML)</li>
-                  <li>• <Link to="/case_study/PythIA" className="link link-accent">PythIA AI Assistant</Link> (Tesi)</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        
+
         {/* Academic Projects CTA */}
         <div className="text-center mt-8">
           <div className="card bg-gradient-to-r from-primary/10 to-secondary/10 shadow-xl">
             <div className="card-body">
               <h3 className="card-title justify-center font-Outfit text-xl">Esplora Tutti i Progetti Accademici</h3>
               <p className="text-base-content/80">
-                Scopri il percorso formativo completo attraverso i progetti universitari: 
+                Scopri il percorso formativo completo attraverso i progetti universitari:
                 dalla programmazione ad oggetti all'intelligenza artificiale.
               </p>
               <div className="card-actions justify-center mt-4">
@@ -123,14 +123,14 @@ export default function Index() {
       {/* Professional Experience */}
       <section>
         <h2 className="text-3xl font-bold font-Outfit text-center mb-12">💼 Esperienza Professionale</h2>
-        
+
         {/* Key People */}
         <div className="card bg-gradient-to-r from-primary/10 to-secondary/10 shadow-xl mb-8">
           <div className="card-body text-center">
             <h3 className="card-title justify-center font-Outfit text-2xl">Le Persone che Hanno Creduto in Me</h3>
             <p className="prose max-w-none">
-              La mia carriera è stata plasmata da due mentori eccezionali: <strong>Enrico Giuriolo</strong> e <strong>Enrico Guidi</strong>, 
-              che hanno visto il mio potenziale e mi hanno guidato attraverso progetti trasformativi che hanno definito 
+              La mia carriera è stata plasmata da due mentori eccezionali: <strong>Enrico Giuriolo</strong> e <strong>Enrico Guidi</strong>,
+              che hanno visto il mio potenziale e mi hanno guidato attraverso progetti trasformativi che hanno definito
               il mio percorso professionale.
             </p>
           </div>
@@ -138,37 +138,6 @@ export default function Index() {
 
         {/* Work Timeline */}
         <div className="space-y-8">
-          {/* SGI Servizi */}
-          <div className="card bg-base-200 shadow-xl">
-            <div className="card-body">
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-4">
-                <div>
-                  <h3 className="card-title font-Outfit text-xl">SGI Servizi S.R.L.</h3>
-                  <p className="text-base-content/70">con Enrico Giuriolo</p>
-                </div>
-                <div className="badge badge-outline">2022-presente</div>
-              </div>
-              <p className="mb-4">Stage universitario che mi ha introdotto al mondo dell'AI enterprise e del machine learning applicato.</p>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold mb-2">Progetti Principali:</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• <Link to="/case_study/PythIA" className="link link-accent">PythIA - AI Call Center Assistant</Link> (tesi triennale)</li>
-                    <li>• <Link to="/case_study/Docfiler" className="link link-accent">DocFiler - Blockchain Document Management</Link></li>
-                  </ul>
-                </div>
-                {/* <div>
-                  <h4 className="font-semibold mb-2">Sfide & Apprendimenti:</h4>
-                  <ul className="space-y-1 text-sm">
-                    <li>• Prima esperienza con AI in produzione</li>
-                    <li>• Gestione di big data</li>
-                    <li>• Collaborazione con team enterprise</li>
-                  </ul>
-                </div> */}
-              </div>
-            </div>
-          </div>
 
           {/* 42Night */}
           <div className="card bg-base-200 shadow-xl">
@@ -181,7 +150,7 @@ export default function Index() {
                 <div className="badge badge-outline">2022-2025</div>
               </div>
               <p className="mb-4">Esperienza imprenditoriale che mi ha insegnato l'importanza dell'innovazione e della visione a lungo termine.</p>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold mb-2">Progetti Innovation:</h4>
@@ -203,6 +172,40 @@ export default function Index() {
             </div>
           </div>
 
+          {/* SGI Servizi */}
+          <div className="card bg-base-200 shadow-xl">
+            <div className="card-body">
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-4">
+                <div>
+                  <h3 className="card-title font-Outfit text-xl">SGI Servizi S.R.L.</h3>
+                  <p className="text-base-content/70">con Enrico Giuriolo</p>
+                </div>
+                <div className="badge badge-outline">2022-presente</div>
+              </div>
+              <p className="mb-4">
+                Collaborazione attiva con SGI Servizi, dove applico soluzioni di AI e sviluppo software su progetti enterprise e innovativi.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <h4 className="font-semibold mb-2">Progetti Principali:</h4>
+                  <ul className="space-y-1 text-sm">
+                    <li>• <Link to="/case_study/PythIA" className="link link-accent">PythIA - AI Call Center Assistant</Link> (tesi triennale)</li>
+                    <li>• <Link to="/case_study/Docfiler" className="link link-accent">DocFiler - Blockchain Document Management</Link></li>
+                  </ul>
+                </div>
+                {/* <div>
+                  <h4 className="font-semibold mb-2">Sfide & Apprendimenti:</h4>
+                  <ul className="space-y-1 text-sm">
+                    <li>• Prima esperienza con AI in produzione</li>
+                    <li>• Gestione di big data</li>
+                    <li>• Collaborazione con team enterprise</li>
+                  </ul>
+                </div> */}
+              </div>
+            </div>
+          </div>
+
           {/* Freelance */}
           <div className="card bg-base-200 shadow-xl">
             <div className="card-body">
@@ -213,9 +216,9 @@ export default function Index() {
                 </div>
                 <div className="badge badge-outline">2022-presente</div>
               </div>
-              <p className="mb-4">Il culmine del mio percorso: la capacità di gestire progetti complessi in completa autonomia, 
-              unendo tutte le competenze acquisite nel tempo.</p>
-              
+              <p className="mb-4">Il culmine del mio percorso: la capacità di gestire progetti complessi in completa autonomia,
+                unendo tutte le competenze acquisite nel tempo.</p>
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold mb-2">Progetti Indipendenti:</h4>
@@ -251,7 +254,7 @@ export default function Index() {
                 <p className="text-sm text-base-content/70">Madrelingua</p>
               </div>
             </div>
-            
+
             <div className="card bg-base-200 shadow-xl">
               <div className="card-body text-center p-6">
                 <div className="text-3xl mb-2">🇬🇧</div>
@@ -266,12 +269,12 @@ export default function Index() {
       {/* Community Commitment */}
       <section>
         <h2 className="text-3xl font-bold font-Outfit text-center mb-12">🤝 Impegno per la Comunità</h2>
-        
+
         <div className="card bg-gradient-to-r from-accent/10 to-secondary/10 shadow-xl mb-8">
           <div className="card-body text-center">
             <h3 className="card-title justify-center font-Outfit text-2xl">Dare Indietro alla Società</h3>
             <p className="prose max-w-none">
-              Credo fermamente nel valore del contribuire alla propria comunità. Attraverso progetti gratuiti, 
+              Credo fermamente nel valore del contribuire alla propria comunità. Attraverso progetti gratuiti,
               volontariato e iniziative benefiche, cerco di utilizzare le mie competenze tecniche per fare la differenza.
             </p>
           </div>
@@ -286,10 +289,10 @@ export default function Index() {
                 <h3 className="card-title font-Outfit">Volontariato Leo/Lions</h3>
               </div>
               <p className="mb-4">
-                Membro attivo dell'organizzazione internazionale Lions Club, contribuisco con competenze 
+                Membro attivo dell'organizzazione internazionale Lions Club, contribuisco con competenze
                 tecniche e organizzative a iniziative benefiche locali e internazionali.
               </p>
-              
+
               <div className="space-y-3">
                 <div>
                   <h4 className="font-semibold text-sm mb-2">Attività Principali:</h4>
@@ -320,10 +323,10 @@ export default function Index() {
                 <h3 className="card-title font-Outfit">Progetti Gratuiti</h3>
               </div>
               <p className="mb-4">
-                Dedico parte del mio tempo a progetti pro bono per organizzazioni no-profit, 
+                Dedico parte del mio tempo a progetti pro bono per organizzazioni no-profit,
                 startup sociali e iniziative comunitarie che necessitano di supporto tecnologico.
               </p>
-              
+
               <div className="space-y-3">
                 <div>
                   <h4 className="font-semibold text-sm mb-2">Tipi di Supporto:</h4>
@@ -353,7 +356,7 @@ export default function Index() {
             <div className="text-4xl mb-4">🤝</div>
             <h3 className="card-title justify-center text-xl font-Outfit mb-2">Cerchi Supporto per un Progetto Sociale?</h3>
             <p className="mb-4">
-              Se rappresenti un'organizzazione no-profit o hai un'idea che può fare la differenza nella comunità, 
+              Se rappresenti un'organizzazione no-profit o hai un'idea che può fare la differenza nella comunità,
               parliamone. Valuto con piacere collaborazioni pro bono per progetti con impatto sociale positivo.
             </p>
             <a href="#contact" className="btn btn-primary">Contattami</a>
